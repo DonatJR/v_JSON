@@ -1,5 +1,3 @@
-Include "v_Script"
-
 Class v_JSON
 	Private pScript
 
@@ -66,7 +64,7 @@ Class v_JSON
 
 
 	Public Sub Clear()
-		pScript.Run "clear", Array()
+		pScript.Run "clear", Array("")
 	End Sub
 
 	Public Function Exists(strKey, varValue, blnDeep)
@@ -195,7 +193,3 @@ Class v_JSON
 		Set pScript = Nothing
 	End Sub 
 End Class
-
-If WScript.ScriptName = "v_JSON.vbs" Then
-
-End If
