@@ -42,6 +42,8 @@ Class v_Script
 
 		If TypeName(strNewVal) = "String" And Left(strNewVal, 1) = "{" And Right(strNewVal, 1) = "}" Then
 			pScriptEngine.execScript strVar & " = " & strNewVal, pScriptLanguage
+        ElseIf TypeName(strNewVal) = "String" And Left(strNewVal, 1) = "[" And Right(strNewVal, 1) = "]" Then
+			pScriptEngine.execScript strVar & " = " & strNewVal, pScriptLanguage
 		Else
 			Execute("pScriptEngine." & strVar & " = strNewVal")
 		End If
