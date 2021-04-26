@@ -48,15 +48,15 @@ Class v_JSON
 	End Property
 
 	Public Property Get Items()
-		Items = Deserialize(pScript.Run("getItems", Array()))
+		Items = Deserialize(pScript.Run("getItems", Array(Empty)))
 	End Property
 
 	Public Property Get Keys()
-		Keys = Deserialize(pScript.Run("getKeys", Array()))
+		Keys = Deserialize(pScript.Run("getKeys", Array(Empty)))
 	End Property
 
 	Public Property Get Count()
-		Count = pScript.Run("getCount", Array())
+		Count = pScript.Run("getCount", Array(Empty))
 	End Property
 
 	
@@ -64,7 +64,7 @@ Class v_JSON
 
 
 	Public Sub Clear()
-		pScript.Run "clear", Array("")
+		pScript.Run "clear", Array(Empty)
 	End Sub
 
 	Public Function Exists(strKey, varValue, blnDeep)
